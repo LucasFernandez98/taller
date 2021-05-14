@@ -32,7 +32,7 @@ function validacionTelefono(){
 function validacionEmail(){
     email = document.getElementById("email").value;
 
-    if(ememail === null ||email == ""){
+    if(email === null ||email == ""){
         mensaje(3);
     }else{
         console.log("Email: " + email);
@@ -41,16 +41,15 @@ function validacionEmail(){
 
 function validacionCurso(){
     if(document.getElementById("php").checked === true){
-        return "PHP";
+        console.log("Curso: PHP");
     }else{
         if(document.getElementById("css").checked === true){
-            return "CSS";
+            console.log("Curso: CSS");
         }else{
             if(document.getElementById("javascript").checked === true){
-                return "JavaScript";
+                console.log("Curso: JavaScript");
             }else{
                 mensaje(4);
-                return 0;
             }
         }
     }
@@ -58,13 +57,12 @@ function validacionCurso(){
 
 function validacionExperiencia(){
     if(document.getElementById("intermedio").checked === true){
-        return "Intermedio";
+        console.log("Experiencia: Intermedio");
     }else{
         if(document.getElementById("avanzado").checked === true){
-            return "Avanzado";
+            console.log("Experiencia: Avanzado");
         }else{
             mensaje(5);
-            return 0;
         }
     }
 }
