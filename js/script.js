@@ -1,5 +1,4 @@
 function envioFormulario(){
-    location.href=location.href;
     validacionNombreApellido();
     validacionTelefono();
     validacionEmail();
@@ -68,8 +67,8 @@ function validacionExperiencia(){
 }
 
 function mensaje(color){
-    let div = document.createElement("div");
-    let p = document.createElement("p");
+    var div = document.createElement("div");
+    var p = document.createElement("p");
     switch (color) {
         case 1:p = document.createTextNode("Nombre y/o Apellido no Validos.");
         div.setAttribute("class","alert alert-danger alert-dismissible fade show");break;
@@ -84,7 +83,7 @@ function mensaje(color){
         default:p = document.createTextNode("Usuario Agregado con éxito.");
         div.setAttribute("class","alert alert-success alert-dismissible fade show");break;
     }
-    let button =document.createElement("button"); 
+    var button =document.createElement("button"); 
     div.setAttribute("role","alert");
     button.setAttribute("type","button");
     button.setAttribute("class","btn-close");
@@ -92,6 +91,6 @@ function mensaje(color){
     button.setAttribute("aria-label","Close");
     div.appendChild(p);
     div.appendChild(button);
-    let mensaje = document.getElementById("mensaje");
+    var mensaje = document.getElementById("mensaje");
     mensaje.appendChild(div);
 }
